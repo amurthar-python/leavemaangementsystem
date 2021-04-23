@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee List</title>
+</head>
+<body>
+{% for emps in emp %}
+
+    {{emps.first_name}}, {{emps.last_name}} <a href="{%  url 'display-employee'  emps.employee_id %}">Add</a>
+       <a href="{%  url 'leave'  emps.employee_id %}">Leave</a>
+{% endfor %}
+</body>
+</html>
